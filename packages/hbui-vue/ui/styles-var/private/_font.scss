@@ -1,0 +1,24 @@
+// Font 字体
+
+$hbui-font-size: var(--hbui-font-size, 14px); //正文、卡片副标题
+$hbui-font-size-card-title: var(--hbui-font-size-card-title, 16px); //卡片标题
+$hbui-font-size-page-title: var(--hbui-font-size-page-title, 16px); //页面标题
+$hbui-font-size-message: var(--hbui-font-size-page-title, 16px); //页面标题
+$hbui-font-size-modal-title: var(--hbui-font-size-modal-title, 18px); //弹窗标题、数字
+$hbui-font-size-price: var(--hbui-font-size-price, 20px); //购买价格
+$hbui-font-size-data-overview: var(--hbui-font-size-data-overview, 24px); //数据总览
+
+$hbui-font-size-h1-title: var(--hbui-font-size-h1-title, 28px);
+$hbui-font-size-h2-title: var(--hbui-font-size-h2-title, 24px);
+$hbui-font-size-h3-title: var(--hbui-font-size-h3-title, 20px);
+$hbui-font-size-h4-title: var(--hbui-font-size-h4-title, 18px);
+$hbui-font-size-h5-title: var(--hbui-font-size-h5-title, 16px);
+
+$hbui-font-size-icon: var(--hbui-font-size-icon, 16px); //图标大小
+$hbui-font-size-sm: var(--hbui-font-size-sm, 12px); //当组件size为'sm'时使用此字号大小
+$hbui-font-size-md: var(--hbui-font-size-md, 14px); //当组件size为''时使用此字号大小
+$hbui-font-size-lg: var(--hbui-font-size-lg, 14px); //当组件size为'lg'时使用此字号大小
+
+$hbui-font-title-weight: var(--hbui-font-title-weight, bold); //标题文字粗细
+$hbui-font-content-weight: var(--hbui-font-content-weight, normal); //内容文字粗细
+$hbui-line-height-base: var(--hbui-line-height-base, 1.5); //规范行高

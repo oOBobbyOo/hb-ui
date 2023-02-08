@@ -1,0 +1,187 @@
+// 基础色值
+
+// 取色规则1： 所有使用颜色均需要在色板中选择
+// 取色规则2： 除标签等用于功能分类及black,white的取色可以增加透明度(eg: rgba($hbui-white-5,0.3)，其余场景均不允许
+
+$hbui-blue-5: #f2f5fc;
+$hbui-blue-10: #e9edfa;
+$hbui-blue-20: #beccfa;
+$hbui-blue-30: #96adfa;
+$hbui-blue-40: #7693f5;
+$hbui-blue-50: #5e7ce0;
+$hbui-blue-60: #526ecc;
+$hbui-blue-70: #465eb8;
+$hbui-blue-80: #3c51a6;
+$hbui-blue-90: #344899;
+$hbui-blue-100: #2a3c85;
+
+$hbui-sky-5: #ebf6ff;
+$hbui-sky-10: #d1ebff;
+$hbui-sky-20: #b8e0ff;
+$hbui-sky-30: #9ed5ff;
+$hbui-sky-40: #85caff;
+$hbui-sky-50: #6cbfff;
+$hbui-sky-60: #4ea6e6;
+$hbui-sky-70: #3590cc;
+$hbui-sky-80: #207ab3;
+$hbui-sky-90: #0f6999;
+$hbui-sky-100: #035880;
+
+$hbui-green-5: #edfff9;
+$hbui-green-10: #cffcee;
+$hbui-green-20: #acf2dc;
+$hbui-green-30: #8be8cb;
+$hbui-green-40: #6ddebb;
+$hbui-green-50: #50d4ab;
+$hbui-green-60: #3ac295;
+$hbui-green-70: #27b080;
+$hbui-green-80: #169e6c;
+$hbui-green-90: #088c58;
+$hbui-green-100: #007a45;
+
+$hbui-lime-5: #f0ffe6;
+$hbui-lime-10: #e5ffd4;
+$hbui-lime-20: #d8fcc0;
+$hbui-lime-30: #c5f2a7;
+$hbui-lime-40: #b3e890;
+$hbui-lime-50: #a6dd82;
+$hbui-lime-60: #92cc68;
+$hbui-lime-70: #7eba50;
+$hbui-lime-80: #6ca83b;
+$hbui-lime-90: #5e9629;
+$hbui-lime-100: #518519;
+
+$hbui-yellow-5: #fffbf0;
+$hbui-yellow-10: #fff1c2;
+$hbui-yellow-20: #ffe794;
+$hbui-yellow-30: #ffdc66;
+$hbui-yellow-40: #ffd138;
+$hbui-yellow-50: #fac20a;
+$hbui-yellow-60: #e3aa00;
+$hbui-yellow-70: #cc9600;
+$hbui-yellow-80: #b58200;
+$hbui-yellow-90: #9e6f00;
+$hbui-yellow-100: #875c00;
+
+$hbui-orange-5: #fff3e8;
+$hbui-orange-10: #ffe1c7;
+$hbui-orange-20: #ffd0a6;
+$hbui-orange-30: #ffbf85;
+$hbui-orange-40: #ffad63;
+$hbui-orange-50: #fa9841;
+$hbui-orange-60: #e37d29;
+$hbui-orange-70: #cc6414;
+$hbui-orange-80: #b54e04;
+$hbui-orange-90: #9e3f00;
+$hbui-orange-100: #873400;
+
+$hbui-red-5: #ffeeed;
+$hbui-red-10: #ffd5d4;
+$hbui-red-20: #ffbcba;
+$hbui-red-30: #ffa4a1;
+$hbui-red-40: #ff8b87;
+$hbui-red-50: #f66f6a;
+$hbui-red-60: #de504e;
+$hbui-red-70: #c73636;
+$hbui-red-80: #b02121;
+$hbui-red-90: #991111;
+$hbui-red-100: #820404;
+
+$hbui-magenta-5: #ffedf3;
+$hbui-magenta-10: #ffd4e3;
+$hbui-magenta-20: #ffbad2;
+$hbui-magenta-30: #ffa1c2;
+$hbui-magenta-40: #fc86b0;
+$hbui-magenta-50: #f3689a;
+$hbui-magenta-60: #db4d83;
+$hbui-magenta-70: #c4356e;
+$hbui-magenta-80: #ad215b;
+$hbui-magenta-90: #96114d;
+$hbui-magenta-100: #800440;
+
+$hbui-purple-5: #f5f0ff;
+$hbui-purple-10: #e7d9ff;
+$hbui-purple-20: #d8c2ff;
+$hbui-purple-30: #caabff;
+$hbui-purple-40: #bc94ff;
+$hbui-purple-50: #a97af8;
+$hbui-purple-60: #8a5ce0;
+$hbui-purple-70: #6f42c9;
+$hbui-purple-80: #572db3;
+$hbui-purple-90: #3f1a9c;
+$hbui-purple-100: #2a0c85;
+
+$hbui-gray-5: #f5f5f5;
+$hbui-gray-10: #ebebeb;
+$hbui-gray-20: #e0e0e0;
+$hbui-gray-30: #d1d1d1;
+$hbui-gray-40: #bdbdbd;
+$hbui-gray-50: #8a8a8a;
+$hbui-gray-60: #878787;
+$hbui-gray-70: #707070;
+$hbui-gray-80: #5c5c5c;
+$hbui-gray-90: #474747;
+$hbui-gray-100: #383838;
+
+$hbui-slate-5: #f7f8fa;
+$hbui-slate-10: #eef0f5;
+$hbui-slate-20: #dfe1e6;
+$hbui-slate-30: #d7d8da;
+$hbui-slate-40: #cfd0d3;
+$hbui-slate-50: #babbc0;
+$hbui-slate-60: #9b9fa8;
+$hbui-slate-70: #71757f;
+$hbui-slate-80: #575d6c;
+$hbui-slate-90: #323745;
+$hbui-slate-100: #252b3a;
+
+$hbui-zinc-5: #f8f8fa;
+$hbui-zinc-10: #f2f2f3;
+$hbui-zinc-20: #e2e2e6;
+$hbui-zinc-30: #d5d5db;
+$hbui-zinc-40: #c7c7d1;
+$hbui-zinc-50: #aeaebd;
+$hbui-zinc-60: #9696a3;
+$hbui-zinc-70: #7a7a85;
+$hbui-zinc-80: #63636b;
+$hbui-zinc-90: #494952;
+$hbui-zinc-100: #37373d;
+
+$hbui-dark-gray-5: #16181a;
+$hbui-dark-gray-10: #202124;
+$hbui-dark-gray-20: #292a2e;
+$hbui-dark-gray-30: #2e2f33;
+$hbui-dark-gray-40: #323338;
+$hbui-dark-gray-50: #393a3e;
+$hbui-dark-gray-60: #4e5057;
+$hbui-dark-gray-70: #696c75;
+$hbui-dark-gray-80: #868a99;
+$hbui-dark-gray-90: #acb0bd;
+$hbui-dark-gray-100: #ced1db;
+
+$hbui-dark-slate-5: #0e111a;
+$hbui-dark-slate-10: #141721;
+$hbui-dark-slate-20: #1a1e29;
+$hbui-dark-slate-30: #232633;
+$hbui-dark-slate-40: #2c303e;
+$hbui-dark-slate-50: #33384b;
+$hbui-dark-slate-60: #444b61;
+$hbui-dark-slate-70: #626a85;
+$hbui-dark-slate-80: #878ea8;
+$hbui-dark-slate-90: #a3aac2;
+$hbui-dark-slate-100: #c1c7db;
+
+$hbui-dark-zinc-5: #1a1a1c;
+$hbui-dark-zinc-10: #212124;
+$hbui-dark-zinc-20: #28282b;
+$hbui-dark-zinc-30: #2f2f33;
+$hbui-dark-zinc-40: #353537;
+$hbui-dark-zinc-50: #3d3d42;
+$hbui-dark-zinc-60: #4b4b52;
+$hbui-dark-zinc-70: #575861;
+$hbui-dark-zinc-80: #767680;
+$hbui-dark-zinc-90: #9898a3;
+$hbui-dark-zinc-100: #b7b7c7;
+
+$hbui-white-5: #ffffff;
+$hbui-black-5: #000000;

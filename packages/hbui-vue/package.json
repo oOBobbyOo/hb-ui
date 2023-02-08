@@ -1,0 +1,39 @@
+{
+  "name": "vue-hbui",
+  "private": true,
+  "version": "0.0.0",
+  "description": "HBUI components based on Vite and Vue3",
+  "keywords": [
+    "frontend",
+    "typescript",
+    "ui-component",
+    "components",
+    "vue-components",
+    "vue",
+    "vue3",
+    "vite",
+    "jsx",
+    "hbui"
+  ],
+  "scripts": {
+    "docs:dev": "pnpm register:components && vitepress dev docs",
+    "docs:build": "pnpm register:components && vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "docs:serve": "vitepress serve docs",
+    "register:components": "vitepress-rc",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "dependencies": {
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "sass": "^1.58.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0",
+    "vitepress": "1.0.0-alpha.30",
+    "vitepress-theme-demoblock": "^2.0.2",
+    "vue-tsc": "^1.0.24"
+  }
+}

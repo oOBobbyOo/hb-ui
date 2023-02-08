@@ -2,7 +2,9 @@ node_modules
 .DS_Store
 dist
 dist-ssr
+cache
 .eslintcache
+*.local
 
 # local env files
 .env.local

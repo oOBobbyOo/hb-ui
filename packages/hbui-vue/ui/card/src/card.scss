@@ -1,0 +1,76 @@
+@import '@hbui/styles-var/index.scss';
+
+$card-ele-space: var(--card-ele-space, 8px);
+$card-block-space: var(--card-block-space, 16px);
+$card-border-radius: $hbui-border-radius-card;
+$card-title-font-size: $hbui-font-size-card-title;
+$card-subtitle-font-size: $hbui-font-size;
+$card-content-font-size: $hbui-font-size;
+
+.#{$hbui-prefix}-card {
+  position: relative;
+  display: block;
+  padding: 16px 20px;
+}
+
+.#{$hbui-prefix}-card__title {
+  display: block;
+  font-size: $card-title-font-size;
+  font-weight: 600;
+  color: $hbui-text;
+}
+
+.#{$hbui-prefix}-card__subtitle {
+  display: block;
+  font-size: $card-subtitle-font-size;
+  color: $hbui-aide-text-stress;
+}
+
+.#{$hbui-prefix}-card__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: $card-block-space;
+}
+
+.#{$hbui-prefix}-card__content {
+  font-size: $card-content-font-size;
+  color: $hbui-aide-text;
+}
+
+.#{$hbui-prefix}-card__actions {
+  margin-top: $card-block-space;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.#{$hbui-prefix}-card__title + .#{$hbui-prefix}-card__subtitle {
+  margin-top: $card-ele-space;
+}
+
+.#{$hbui-prefix}-card__actions--align-end {
+  justify-content: flex-end;
+}
+
+.#{$hbui-prefix}-card__actions--align-spaceBetween {
+  justify-content: space-between;
+}
+
+.#{$hbui-prefix}-card__meta {
+  width: calc(100% + 40px);
+  margin: 0 -20px $card-block-space -20px;
+  height: auto;
+}
+
+.#{$hbui-prefix}-card__meta:first-child {
+  margin-top: -$card-block-space;
+}
+
+.#{$hbui-prefix}-card {
+  &__shadow--hover:hover,
+  &__shadow--always {
+    box-shadow: $hbui-shadow-length-hover $hbui-light-shadow;
+    transform: translateY(-5px);
+  }
+}

@@ -1,0 +1,9 @@
+// Border Radius 圆角
+
+$hbui-border-radius: var(--hbui-border-radius, 2px); //一般圆角
+$hbui-border-radius-feedback: var(--hbui-border-radius-feedback, 4px); //反馈类圆角
+$hbui-border-radius-card: var(--hbui-border-radius-card, 6px); //卡片,弹窗圆角
+$hbui-border-radius-full: var(
+  --hbui-border-radius-full,
+  100px
+); //暂不对外开放，用于开关，进度条等组件的圆角自适应宽高
