@@ -7,7 +7,7 @@
   "build": {
     "alias": "Build",
     "desc": "Build theme and docs",
-    "command": "pnpm --filter vue-devui docs:build"
+    "command": "pnpm --filter vue-hbui docs:build"
   },
   "lints": {
     "alias": "Lints",
@@ -24,6 +24,14 @@
         "prettier --write packages/**/*.{js,json,tsx,css,less,scss,vue,html,md}",
         "Prettier source files"
       ]
+    }
+  },
+  "tests": {
+    "alias": "Tests",
+    "desc": "Select a test script to run",
+    "scripts": {
+      "test": ["pnpm --filter vue-hbui test --reporter default", "Test vue-hbui"],
+      "coverage": ["pnpm --filter vue-hbui coverage", "Test vue-hbui and gen coverage"]
     }
   }
 }
