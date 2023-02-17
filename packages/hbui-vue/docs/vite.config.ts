@@ -7,7 +7,8 @@ export default defineConfig({
   resolve: {
     alias: [
       { find: '@hbui', replacement: resolve(__dirname, '../ui') },
-      { find: '@hooks', replacement: resolve(__dirname, '../ui/shared/hooks') }
+      { find: '@hooks', replacement: resolve(__dirname, '../ui/shared/hooks') },
+      { find: '@utils', replacement: resolve(__dirname, '../ui/shared/utils') }
     ]
   }
 })

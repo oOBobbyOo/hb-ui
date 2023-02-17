@@ -1,0 +1,284 @@
+@import '@hbui/styles-var/index.scss';
+
+$hbui-btn-padding: var(--hbui-btn-padding, 0 20px);
+$hbui-btn-common-bg: var(--hbui-btn-common-bg, $hbui-base-bg);
+$hbui-btn-common-bg-hover: var(--hbui-btn-common-bg-hover, $hbui-base-bg);
+$hbui-btn-common-bg-active: var(--hbui-btn-common-bg-active, $hbui-base-bg);
+$hbui-btn-common-color-hover: var(--hbui-btn-common-color-hover, $hbui-brand-active);
+$hbui-btn-common-color-active: var(--hbui-btn-common-color-active, $hbui-brand-active);
+$hbui-btn-common-border-color: var(--hbui-btn-common-border-color, $hbui-line);
+$hbui-btn-common-border-color-hover: var(
+  --hbui-btn-common-border-color-hover,
+  $hbui-form-control-line-active
+);
+$hbui-btn-common-border-color-active: var(
+  --hbui-btn-common-border-color-active,
+  $hbui-form-control-line-active
+);
+$hbui-btn-sm-padding: var(--hbui-btn-sm-padding, 0 16px);
+$hbui-btn-lg-padding: var(--hbui-btn-lg-padding, 0 24px);
+
+.#{$hbui-prefix}-button {
+  padding: $hbui-btn-padding;
+  font-size: $hbui-font-size-md;
+  line-height: $hbui-line-height-base;
+  border-radius: $hbui-border-radius;
+  border-width: 1px;
+  border-color: transparent;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &--is-loading {
+    pointer-events: none;
+  }
+
+  &--solid {
+    color: $hbui-light-text;
+    min-width: 64px;
+
+    i {
+      color: $hbui-light-text;
+    }
+
+    &--secondary {
+      color: $hbui-text;
+      border-color: $hbui-btn-common-border-color;
+      background-color: $hbui-btn-common-bg;
+
+      &:hover {
+        color: $hbui-btn-common-color-hover;
+        border-color: $hbui-btn-common-border-color-hover;
+        background-color: $hbui-btn-common-bg-hover;
+      }
+
+      &:focus {
+        color: $hbui-btn-common-color-active;
+        border-color: $hbui-btn-common-border-color-active;
+        background-color: $hbui-btn-common-bg-hover;
+      }
+
+      &:active {
+        color: $hbui-btn-common-color-active;
+        border-color: $hbui-btn-common-border-color-active;
+        background-color: $hbui-btn-common-bg-hover;
+      }
+
+      &:disabled {
+        opacity: 0.8;
+      }
+    }
+
+    &--primary {
+      background-color: $hbui-primary;
+
+      &:hover {
+        background-color: $hbui-primary-hover;
+      }
+
+      &:focus {
+        background-color: $hbui-primary-hover;
+      }
+
+      &:active {
+        background-color: $hbui-primary-active;
+      }
+
+      &:disabled {
+        color: $hbui-light-text;
+        background: $hbui-primary-disabled;
+        border: none;
+      }
+    }
+
+    &--danger {
+      background-color: $hbui-contrast;
+
+      &:hover {
+        background-color: $hbui-contrast-hover;
+      }
+
+      &:focus {
+        background-color: $hbui-contrast-hover;
+      }
+
+      &:active {
+        background-color: $hbui-contrast-active;
+      }
+
+      &:disabled {
+        background-color: $hbui-contrast-disabled;
+      }
+    }
+  }
+
+  &--outline {
+    background-color: $hbui-block;
+    border-style: solid;
+
+    i {
+      color: $hbui-text;
+    }
+
+    &--secondary {
+      color: $hbui-text;
+      border-color: $hbui-line;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $hbui-brand-active;
+        border-color: $hbui-form-control-line-active;
+
+        i {
+          color: $hbui-brand-active;
+          border-color: $hbui-form-control-line-active;
+        }
+      }
+
+      &:disabled {
+        color: $hbui-disabled-text;
+        border-color: $hbui-disabled-line;
+        background-color: $hbui-disabled-bg;
+
+        i {
+          color: $hbui-disabled-text;
+        }
+      }
+    }
+
+    &--primary {
+      color: $hbui-brand-active;
+      border-color: $hbui-form-control-line-active;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $hbui-brand-active-focus;
+        border-color: $hbui-form-control-line-active-hover;
+
+        i {
+          color: $hbui-brand-active-focus;
+          border-color: $hbui-form-control-line-active-hover;
+        }
+      }
+
+      &:disabled {
+        opacity: 0.8;
+        color: $hbui-brand-active;
+        border-color: $hbui-form-control-line-active;
+
+        i {
+          color: $hbui-brand-active;
+        }
+      }
+    }
+
+    &--danger {
+      color: $hbui-contrast;
+      border-color: $hbui-contrast;
+
+      i {
+        color: $hbui-contrast;
+      }
+
+      &:hover,
+      &:focus,
+      &:active,
+      &:disabled {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &--text {
+    padding: 0;
+
+    &--secondary {
+      color: $hbui-text;
+
+      &:hover {
+        color: $hbui-list-item-hover-text;
+      }
+
+      &:focus {
+        color: $hbui-list-item-hover-text;
+      }
+
+      &:active {
+        color: $hbui-list-item-hover-text;
+      }
+
+      &:disabled {
+        color: $hbui-disabled-text;
+      }
+    }
+
+    &--primary {
+      color: $hbui-brand-active;
+
+      &:hover {
+        color: $hbui-link-active;
+      }
+
+      &:focus {
+        color: $hbui-brand-active-focus;
+      }
+
+      &:active {
+        color: $hbui-brand-active-focus;
+      }
+
+      &:disabled {
+        opacity: 0.8;
+      }
+    }
+
+    &--danger {
+      color: $hbui-contrast;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &:disabled {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &--sm {
+    padding: $hbui-btn-sm-padding;
+    height: $hbui-size-sm;
+    font-size: $hbui-font-size-sm;
+    min-width: 56px;
+  }
+
+  &--lg {
+    padding: $hbui-btn-lg-padding;
+    height: $hbui-size-lg;
+    font-size: $hbui-font-size-lg;
+    min-width: 72px;
+  }
+}
+
+.#{$hbui-prefix}-button {
+  transition: background-color $hbui-animation-duration-slow $hbui-animation-ease-in-out-smooth,
+    border-color $hbui-animation-duration-slow $hbui-animation-ease-in-out-smooth,
+    color $hbui-animation-duration-slow $hbui-animation-ease-in-out-smooth;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+}
+
+.button-content {
+  display: inline-block;
+  position: relative;
+}

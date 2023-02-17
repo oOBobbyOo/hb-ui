@@ -1,0 +1,17 @@
+.demo-block {
+  .demo-spacing {
+    & > * {
+      margin: 0 8px 8px 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &:last-child {
+      & > * {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
