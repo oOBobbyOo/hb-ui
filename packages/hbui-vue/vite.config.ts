@@ -1,23 +1,24 @@
-import { resolve } from 'path'
 import { defineConfig } from 'vitest/config'
-
-// jsx 依赖
+import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import VueMacros from 'unplugin-vue-macros/vite'
 
 export default defineConfig({
-  plugins: [vueJsx()],
+  plugins: [
+    VueMacros({
+      setupComponent: false,
+      setupSFC: false,
+      plugins: {
+        vue: vue(),
+        vueJsx: vueJsx()
+      }
+    })
+  ],
   test: {
     globals: true,
     environment: 'jsdom',
     transformMode: {
       web: [/\.[jt]sx$/]
     }
-  },
-  resolve: {
-    alias: [
-      { find: '@hbui', replacement: resolve(__dirname, './ui') },
-      { find: '@hooks', replacement: resolve(__dirname, './ui/shared/hooks') },
-      { find: '@utils', replacement: resolve(__dirname, './ui/shared/utils') }
-    ]
   }
 })

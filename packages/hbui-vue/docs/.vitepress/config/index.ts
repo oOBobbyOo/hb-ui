@@ -7,11 +7,13 @@ import nav from './nav'
 import lang from './lang'
 
 export default defineConfig({
+  lang: 'zh-CN',
   title: 'Vue HBUI',
   description: 'Vue HBUI 组件库',
   head,
   markdown,
   themeConfig: {
+    socialLinks: [{ icon: 'github', link: '' }],
     sidebar,
     nav,
     footer: {
