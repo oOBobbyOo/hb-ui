@@ -1,0 +1,17 @@
+:root {
+  --hb-c-divider-light: #f2f2f3;
+  --hb-c-divider-dark: rgba(84, 84, 84, 0.48);
+
+  --hb-code-block-bg: #f5f5f5;
+  --hb-code-block-color: var(--vp-c-text-1);
+}
+
+:root {
+  --demoblock-border: var(--hb-c-divider-light);
+}
+
+.dark {
+  --hb-c-divider-light: var(--hb-c-divider-dark);
+  --hb-code-block-bg: #161618;
+  --hb-code-block-color: var(--vp-c-text-1);
+}

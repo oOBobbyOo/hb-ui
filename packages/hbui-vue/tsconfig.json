@@ -4,6 +4,7 @@
     "useDefineForClassFields": true,
     "module": "ESNext",
     "moduleResolution": "Node",
+    "allowJs": true,
     "strict": true,
     "jsx": "preserve",
     "resolveJsonModule": true,
@@ -19,7 +20,7 @@
       "@utils/*": ["./ui/shared/utils/*"]
     },
     "types": ["vite/client", "unplugin-vue-macros/macros-global"],
-    "typeRoots": ["./node_modules", "../typings/vue-shim.d.ts"],
+    "typeRoots": ["./node_modules", "./typings/vue-shim.d.ts"],
     "plugins": [{ "name": "@vuedx/typescript-plugin-vue" }],
     "declaration": true,
     "declarationDir": "build/types"

@@ -28,7 +28,9 @@
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
+    "@docsearch/css": "^3.3.3",
     "@vueuse/core": "^9.13.0",
+    "body-scroll-lock": "4.0.0-beta.0",
     "vue": "^3.2.45"
   },
   "devDependencies": {
@@ -42,6 +44,7 @@
     "@vitest/coverage-c8": "^0.28.5",
     "@vue/test-utils": "^2.2.10",
     "@vuedx/typescript-plugin-vue": "^0.7.6",
+    "@vuepress/plugin-prismjs": "2.0.0-beta.4",
     "chalk": "^5.2.0",
     "escape-html": "^1.0.3",
     "jsdom": "^21.1.0",
