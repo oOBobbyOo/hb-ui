@@ -18,7 +18,7 @@ import genServiceTemplate from '../templates/component/service'
 import genDirectiveTemplate from '../templates/component/directive'
 import logger from './logger'
 
-const WRITE_FILE_OPTIONS: WriteFileOptions = { encoding: 'utf-8' }
+export const WRITE_FILE_OPTIONS: WriteFileOptions = { encoding: 'utf-8' }
 
 export default function genComponent(params: any) {
   const { name, title, category, parts } = params

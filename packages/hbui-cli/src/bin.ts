@@ -14,9 +14,11 @@ program
     `创建类型，可选值：${CREATE_SUPPORT_TYPES.join(', ')}`,
     validateCreateType
   )
+  .option('--core', '创建组件核心文件')
+  .option('--service', '创建组件service')
+  .option('--directive', '创建组件diretive')
+  .option('-f --force', '覆盖原文件', false)
   .option('-e --env <env>', '环境，可选值: dev, prod')
-  .option('--ignore-parse-error', '忽略解析错误', false)
-  .option('--cover', '覆盖原文件', false)
   .action(createAction)
 
 program.parse(process.argv)

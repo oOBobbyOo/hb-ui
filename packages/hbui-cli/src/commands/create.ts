@@ -3,9 +3,11 @@ import logger from '../shared/logger'
 import { CREATE_SUPPORT_TYPES, CREATE_UNFINISHED_TYPES } from '../shared/constant'
 import { selectCreateType } from '../inquiers/create'
 import createComponentAction from './create-component'
+import createDocumentAction from './create-doc'
 
 const CREATE_TYPE_ACTION = {
-  component: createComponentAction
+  component: createComponentAction,
+  'component-doc': createDocumentAction
 }
 
 export type CreateCMD = {

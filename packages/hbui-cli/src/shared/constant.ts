@@ -3,8 +3,8 @@ import { version } from '../../package.json'
 export const CWD = process.cwd()
 export const VERSION = version
 
-export const CREATE_SUPPORT_TYPES = ['component', 'component-test', 'component-doc']
-export const CREATE_UNFINISHED_TYPES = ['component-test', 'component-doc']
+export const CREATE_SUPPORT_TYPES = ['component', 'component-doc', 'component-test']
+export const CREATE_UNFINISHED_TYPES = ['component-test']
 
 export const COMPONENT_PARTS_MAP = [
   {
@@ -18,6 +18,17 @@ export const COMPONENT_PARTS_MAP = [
   {
     name: 'service（服务）',
     value: 'service'
+  }
+]
+
+export const DOCUMENT_PARTS_MAP = [
+  {
+    name: 'markdown（组件文档）',
+    value: 'markdown'
+  },
+  {
+    name: 'example（组件demo）',
+    value: 'example'
   }
 ]
 
