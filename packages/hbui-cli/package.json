@@ -1,0 +1,34 @@
+{
+  "name": "hbui-cli",
+  "version": "1.0.0",
+  "description": "hbui-cli",
+  "keywords": [
+    "cli"
+  ],
+  "license": "MIT",
+  "main": "lib/bin.js",
+  "bin": {
+    "hbui": "lib/bin.js"
+  },
+  "files": [
+    "lib",
+    "types"
+  ],
+  "scripts": {
+    "dev": "esbuild --bundle ./src/bin.ts --format=cjs --platform=node --outfile=./lib/bin.js --external:esbuild --minify-whitespace --watch",
+    "cli": "node ./lib/bin.js"
+  },
+  "dependencies": {
+    "esbuild": "^0.17.10",
+    "fs-extra": "^11.1.0",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/inquirer": "^9.0.3",
+    "@types/lodash-es": "^4.17.6",
+    "commander": "^10.0.0",
+    "inquirer": "^9.1.4",
+    "kolorist": "^1.7.0"
+  }
+}
