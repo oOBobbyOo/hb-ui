@@ -2,12 +2,21 @@ import { resolve } from 'path'
 import { WriteFileOptions } from 'fs'
 import { mkdirSync, writeFileSync } from 'fs-extra'
 import { cliConfig } from './config'
-import { coreFileName, typesFileName } from '../templates/component/utils'
+import {
+  coreFileName,
+  coreName,
+  directiveFileName,
+  serviceFileName,
+  typesFileName
+} from '../templates/component/utils'
 import genIndexTemplate from '../templates/component'
 import genCoreTemplate from '../templates/component/core'
 import genStyleTemplate from '../templates/component/style'
 import genTypesTemplate from '../templates/component/types'
 import genTestTemplate from '../templates/component/test'
+import genServiceTemplate from '../templates/component/service'
+import genDirectiveTemplate from '../templates/component/directive'
+import logger from './logger'
 
 const WRITE_FILE_OPTIONS: WriteFileOptions = { encoding: 'utf-8' }
 
@@ -20,6 +29,7 @@ export default function genComponent(params: any) {
   const srcPath = resolve(coreFilePath, 'src')
   const testsPath = resolve(coreFilePath, '__tests__')
 
+  // 创建目录
   mkdirSync(coreFilePath, { recursive: true })
   mkdirSync(srcPath, { recursive: true })
   mkdirSync(testsPath, { recursive: true })
@@ -40,6 +50,21 @@ export default function genComponent(params: any) {
     )
   }
 
+  if (parts.includes('service')) {
+    needsTypes = true
+
+    const serviceFilePath = resolve(srcPath, serviceFileName(name) + '.ts')
+    writeFileSync(serviceFilePath, genServiceTemplate(name), WRITE_FILE_OPTIONS)
+  }
+
+  if (parts.includes('directive')) {
+    needsTypes = true
+
+    const directiveFilePath = resolve(srcPath, directiveFileName(name) + '.ts')
+    // 指令
+    writeFileSync(directiveFilePath, genDirectiveTemplate(), WRITE_FILE_OPTIONS)
+  }
+
   if (needsTypes) {
     const typesFilePath = resolve(srcPath, typesFileName(name) + '.ts')
     // 类型
@@ -54,4 +79,6 @@ export default function genComponent(params: any) {
     // test
     writeFileSync(testFilePath, genTestTemplate(name), WRITE_FILE_OPTIONS)
   }
+
+  logger.success(`The component "${coreName(name)}" directory has been generated successfully.`)
 }
