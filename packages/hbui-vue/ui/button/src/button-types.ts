@@ -1,4 +1,4 @@
-import type { PropType, ExtractPropTypes, ComputedRef } from 'vue'
+import type { PropType, ExtractPropTypes, ComputedRef, InjectionKey, Ref } from 'vue'
 
 export type IButtonVariant = 'solid' | 'outline' | 'text'
 export type IButtonColor = 'secondary' | 'primary' | 'danger'
@@ -34,10 +34,24 @@ export const buttonProps = {
   }
 } as const
 
+export const buttonGroupProps = {
+  size: {
+    type: String as PropType<IButtonSize>,
+    default: 'md'
+  }
+} as const
+
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>
+export type ButtonGroupProps = ExtractPropTypes<typeof buttonGroupProps>
 
 export interface UseButtonReturnType {
   classes: ComputedRef<{
     [key: string]: string | boolean
   }>
 }
+
+interface ButtonGroupInjection {
+  size: Ref<IButtonSize>
+}
+
+export const buttonGroupInjectionKey: InjectionKey<ButtonGroupInjection> = Symbol('hb-button-group')

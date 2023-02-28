@@ -29,3 +29,73 @@ button/theme
 button/size
 
 :::
+
+### 禁用状态
+
+:::demo 通过`disabled`参数设置按钮禁用状态。
+
+button/disable
+
+:::
+
+### 按钮组
+
+将多个按钮作为一组放入按钮组容器中。按钮组可通过 size 设置尺寸，并与下拉菜单混合使用。
+
+:::demo
+
+button/buttonGroup
+
+:::
+
+### Button 参数
+
+| 参数名   | 类型                              | 默认        | 说明                      | 跳转 Demo                 |
+| :------- | :-------------------------------- | :---------- | :------------------------ | :------------------------ |
+| variant  | [IButtonVariant](#ibuttonvariant) | 'outline'   | 可选，按钮形态            | [形态](#形态)             |
+| color    | [IButtonColor](#ibuttoncolor)     | 'secondary' | 可选，按钮主题            | [主题色](#主题色)         |
+| size     | [IButtonSize](#ibuttonsize)       | 'md'        | 可选，按钮尺寸            | [尺寸](#尺寸)             |
+| icon     | `string`                          | --          | 可选，自定义按钮图标      | [图标按钮](#图标按钮)     |
+| shape    | [IButtonShape](#ibuttonshape)     | --          | 可选，按钮形状(圆形/圆角) | [图标按钮](#图标按钮)     |
+| disabled | `boolean`                         | false       | 可选，是否禁用 button     | [禁用状态](#禁用状态)     |
+| loading  | `boolean`                         | false       | 可选，设置加载中状态      | [加载中状态](#加载中状态) |
+
+### Button 类型定义
+
+#### IButtonVariant
+
+```ts
+type IButtonVariant = 'solid' | 'outline' | 'text'
+```
+
+#### IButtonSize
+
+```ts
+type IButtonSize = 'lg' | 'md' | 'sm'
+```
+
+#### IButtonColor
+
+```ts
+type IButtonColor = 'primary' | 'secondary' | 'danger'
+```
+
+#### IButtonShape
+
+```ts
+type IButtonShape = 'circle' | 'round'
+```
+
+### ButtonGroup 参数
+
+| 参数名 | 类型                             | 默认 | 说明             | 跳转 Demo         |
+| :----- | :------------------------------- | :--- | :--------------- | :---------------- |
+| size   | [IButtonSize](#iButtonGroupSize) | 'md' | 可选，按钮组尺寸 | [按钮组](#按钮组) |
+
+### ButtonGroup 类型定义
+
+#### IButtonGroupSize
+
+```ts
+type IButtonGroupSize = 'lg' | 'md' | 'sm'
+```
