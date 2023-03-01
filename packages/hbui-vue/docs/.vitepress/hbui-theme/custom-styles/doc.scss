@@ -1,0 +1,20 @@
+/**
+ * Table
+ * -------------------------------------------------------------------------- */
+
+.vp-doc table {
+  display: table;
+  width: 100%;
+}
+
+/**
+ * Code
+ * -------------------------------------------------------------------------- */
+
+.vp-doc div[class*='language-'] {
+  background-color: var(--hb-code-block-bg);
+}
+
+.vp-doc [class*='language-'] code {
+  color: var(--hb-code-block-color);
+}
