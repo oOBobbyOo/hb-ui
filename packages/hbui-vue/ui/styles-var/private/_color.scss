@@ -16,24 +16,15 @@ $hbui-contrast: var(--hbui-contrast, #c7000b); // 品牌色撞色、对比色、
 $hbui-text: var(--hbui-text, $hbui-slate-100); // 正文文本
 $hbui-text-weak: var(--hbui-text-weak, $hbui-slate-80); // 弱化的正文信息（手风琴子项，表头）
 $hbui-aide-text: var(--hbui-aide-text, $hbui-slate-70); // 辅助文本、帮助信息（面包屑）
-$hbui-aide-text-hover: var(
-  --hbui-aide-text-hover,
-  $hbui-slate-100
-); // 辅助文本悬浮色，用于标签文本悬浮等场景
-$hbui-aide-text-stress: var(
-  --hbui-aide-text-stress,
-  $hbui-slate-80
-); // 辅助文本、帮助信息里的强调色
+$hbui-aide-text-hover: var(--hbui-aide-text-hover, $hbui-slate-100); // 辅助文本悬浮色，用于标签文本悬浮等场景
+$hbui-aide-text-stress: var(--hbui-aide-text-stress, $hbui-slate-80); // 辅助文本、帮助信息里的强调色
 $hbui-placeholder: var(--hbui-placeholder, $hbui-slate-50); // 占位符
 $hbui-light-text: var(--hbui-light-text, $hbui-white-5); // 有色深色背景下字体颜色（固定）
 $hbui-dark-text: var(--hbui-dark-text, $hbui-slate-100); // 有色浅色背景下字体颜色（固定）
 $hbui-link: var(--hbui-link, $hbui-blue-60); // 链接文本颜色
 $hbui-link-active: var(--hbui-link-active, $hbui-blue-60); // 链接文本悬停/激活颜色
 $hbui-link-light: var(--hbui-link-light, $hbui-blue-30); // 深色背景下链接文本颜色
-$hbui-link-light-active: var(
-  --hbui-link-light-active,
-  $hbui-blue-20
-); // 深色背景下链接文本悬停/激活颜色
+$hbui-link-light-active: var(--hbui-link-light-active, $hbui-blue-20); // 深色背景下链接文本悬停/激活颜色
 $hbui-line: var(--hbui-line, $hbui-slate-30); // 边框分割线，仅用于边框
 $hbui-dividing-line: var(--hbui-dividing-line, $hbui-zinc-10); // 内容分割线，用于内容之间的分割
 $hbui-block: var(--hbui-block, $hbui-white-5); // 大面积的不可折叠区块的背景色（例如顶部导航背景色）
@@ -47,14 +38,8 @@ $hbui-initial: var(--hbui-initial, $hbui-blue-10); // 初始化、未执行
 $hbui-unavailable: var(--hbui-unavailable, $hbui-gray-5); // 不可用、禁用状态
 $hbui-shadow: var(--hbui-shadow, rgba(37, 43, 58, 0.2)); // 阴影色
 $hbui-light-shadow: var(--hbui-light-shadow, rgba(37, 43, 58, 0.1)); // 弱化阴影色
-$hbui-connected-overlay-shadow: var(
-  --hbui-connected-overlay-shadow,
-  rgba(37, 43, 58, 0.12)
-); // 下拉菜单类阴影色
-$hbui-feedback-overlay-shadow: var(
-  --hbui-feedback-overlay-shadow,
-  rgba(37, 43, 58, 0.16)
-); // 信息展示类阴影色
+$hbui-connected-overlay-shadow: var(--hbui-connected-overlay-shadow, rgba(37, 43, 58, 0.12)); // 下拉菜单类阴影色
+$hbui-feedback-overlay-shadow: var(--hbui-feedback-overlay-shadow, rgba(37, 43, 58, 0.16)); // 信息展示类阴影色
 
 // 图标
 $hbui-icon-text: var(--hbui-icon-text, $hbui-slate-70); // 文字图标颜色
@@ -62,116 +47,44 @@ $hbui-icon-bg: var(--hbui-icon-bg, $hbui-white-5); // svg图标 背景色
 $hbui-icon-fill: var(--hbui-icon-fill, $hbui-slate-70); // svg图标 灰色填充色
 $hbui-icon-fill-weak: var(--hbui-icon-fill-weak, $hbui-slate-50); // svg弱化图标 灰色填充色
 $hbui-icon-fill-hover: var(--hbui-icon-fill-hover, $hbui-slate-100); // svg图标 灰色填充色悬停反馈色
-$hbui-icon-fill-active: var(
-  --hbui-icon-fill-active,
-  $hbui-slate-100
-); // svg图标 高亮填充色（激活状态）
-$hbui-icon-fill-active-hover: var(
-  --hbui-icon-fill-active-hover,
-  $hbui-slate-100
-); // svg图标 高亮填充色悬停反馈色
+$hbui-icon-fill-active: var(--hbui-icon-fill-active, $hbui-slate-100); // svg图标 高亮填充色（激活状态）
+$hbui-icon-fill-active-hover: var(--hbui-icon-fill-active-hover, $hbui-slate-100); // svg图标 高亮填充色悬停反馈色
 $hbui-shape-icon-fill: var(--hbui-shape-icon-fill, $hbui-slate-30); // svg图标 面型图标颜色
-$hbui-shape-icon-fill-hover: var(
-  --hbui-shape-icon-fill-hover,
-  $hbui-slate-50
-); // svg图标 面型图标悬浮色
-$hbui-shape-icon-fill-active: var(
-  --hbui-shape-icon-fill-active,
-  $hbui-slate-50
-); // svg图标 面型图标激活色
-$hbui-shape-icon-fill-disabled: var(
-  --hbui-shape-icon-fill-disabled,
-  $hbui-gray-5
-); // svg图标 面型图标激活色
+$hbui-shape-icon-fill-hover: var(--hbui-shape-icon-fill-hover, $hbui-slate-50); // svg图标 面型图标悬浮色
+$hbui-shape-icon-fill-active: var(--hbui-shape-icon-fill-active, $hbui-slate-50); // svg图标 面型图标激活色
+$hbui-shape-icon-fill-disabled: var(--hbui-shape-icon-fill-disabled, $hbui-gray-5); // svg图标 面型图标激活色
 // 表单
-$hbui-form-control-line: var(
-  --hbui-form-control-line,
-  $hbui-slate-30
-); // 表单控件边框色，同 边框分割线
+$hbui-form-control-line: var(--hbui-form-control-line, $hbui-slate-30); // 表单控件边框色，同 边框分割线
 $hbui-form-control-bg: var(--hbui-form-control-bg, $hbui-white-5); // 表单控件背景色
-$hbui-form-control-line-hover: var(
-  --hbui-form-control-line-hover,
-  #575d6c
-); // 表单控件边框悬停反馈色
-$hbui-form-control-line-active: var(
-  --hbui-form-control-line-active,
-  $hbui-blue-50
-); // 表单控件边框激活色，用于获得焦点
-$hbui-form-control-line-active-hover: var(
-  --hbui-form-control-line-active-hover,
-  $hbui-blue-90
-); // 表单控件边框激活色，用于获得焦点且悬停
+$hbui-form-control-line-hover: var(--hbui-form-control-line-hover, #575d6c); // 表单控件边框悬停反馈色
+$hbui-form-control-line-active: var(--hbui-form-control-line-active, $hbui-blue-50); // 表单控件边框激活色，用于获得焦点
+$hbui-form-control-line-active-hover: var(--hbui-form-control-line-active-hover, $hbui-blue-90); // 表单控件边框激活色，用于获得焦点且悬停
 // 列表
 $hbui-list-item-active-bg: var(--hbui-list-item-active-bg, $hbui-blue-5); // 列表类型单选选中背景
-$hbui-list-item-active-text: var(
-  --hbui-list-item-active-text,
-  $hbui-slate-100
-); // 列表类型单选选中背景搭配文本，同 有色深色背景下字体颜色（固定）
-$hbui-list-item-active-hover-bg: var(
-  --hbui-list-item-active-hover-bg,
-  $hbui-blue-5
-); // 列表类型单选选中背景悬停反馈色（仅用于分页等）
+$hbui-list-item-active-text: var(--hbui-list-item-active-text, $hbui-slate-100); // 列表类型单选选中背景搭配文本，同 有色深色背景下字体颜色（固定）
+$hbui-list-item-active-hover-bg: var(--hbui-list-item-active-hover-bg, $hbui-blue-5); // 列表类型单选选中背景悬停反馈色（仅用于分页等）
 $hbui-list-item-hover-bg: var(--hbui-list-item-hover-bg, $hbui-zinc-10); // 列表类型普通选项悬停背景
-$hbui-list-item-hover-text: var(
-  --hbui-list-item-hover-text,
-  $hbui-slate-100
-); // 列表类型普通选项悬停背景搭配文本
-$hbui-list-item-selected-bg: var(
-  --hbui-list-item-selected-bg,
-  $hbui-blue-5
-); // 列表类型多选被选中的行色，仅用于表格类
-$hbui-list-item-strip-bg: var(
-  --hbui-list-item-strip-bg,
-  $hbui-blue-5
-); // 列表类型斑马纹色，仅用于表格类
+$hbui-list-item-hover-text: var(--hbui-list-item-hover-text, $hbui-slate-100); // 列表类型普通选项悬停背景搭配文本
+$hbui-list-item-selected-bg: var(--hbui-list-item-selected-bg, $hbui-blue-5); // 列表类型多选被选中的行色，仅用于表格类
+$hbui-list-item-strip-bg: var(--hbui-list-item-strip-bg, $hbui-blue-5); // 列表类型斑马纹色，仅用于表格类
 // 禁用
 $hbui-disabled-bg: var(--hbui-disabled-bg, $hbui-gray-5); // disabled背景颜色
 $hbui-disabled-line: var(--hbui-disabled-line, $hbui-slate-20); // disabled边框颜色
 $hbui-disabled-text: var(--hbui-disabled-text, #adb0b8); // disabled文字颜色
 $hbui-primary-disabled: var(--hbui-primary-disabled, $hbui-blue-20); //主要按钮disabled状态文字颜色
-$hbui-icon-fill-active-disabled: var(
-  --hbui-icon-fill-active-disabled,
-  $hbui-blue-20
-); // svg图标激活状态禁用色
+$hbui-icon-fill-active-disabled: var(--hbui-icon-fill-active-disabled, $hbui-blue-20); // svg图标激活状态禁用色
 // 特殊背景色
 $hbui-label-bg: var(--hbui-label-bg, $hbui-blue-10); // 默认标签化选项背景色
-$hbui-connected-overlay-bg: var(
-  --hbui-connected-overlay-bg,
-  $hbui-white-5
-); // 有连接点的弹出菜单层背景色
-$hbui-connected-overlay-line: var(
-  --hbui-connected-overlay-line,
-  $hbui-blue-60
-); // 有连接点的弹出菜单层边框色
-$hbui-fullscreen-overlay-bg: var(
-  --hbui-fullscreen-overlay-bg,
-  $hbui-white-5
-); // 全屏类型的弹出内容层背景色（模态弹窗）
-$hbui-feedback-overlay-bg: var(
-  --hbui-feedback-overlay-bg,
-  #464d6e
-); // 信息提示反馈类型的漂浮层背景色（toast、popover）
-$hbui-feedback-overlay-text: var(
-  --hbui-feedback-overlay-text,
-  $hbui-slate-20
-); // 信息提示反馈类型的漂浮层背景色搭配文本色
+$hbui-connected-overlay-bg: var(--hbui-connected-overlay-bg, $hbui-white-5); // 有连接点的弹出菜单层背景色
+$hbui-connected-overlay-line: var(--hbui-connected-overlay-line, $hbui-blue-60); // 有连接点的弹出菜单层边框色
+$hbui-fullscreen-overlay-bg: var(--hbui-fullscreen-overlay-bg, $hbui-white-5); // 全屏类型的弹出内容层背景色（模态弹窗）
+$hbui-feedback-overlay-bg: var(--hbui-feedback-overlay-bg, #464d6e); // 信息提示反馈类型的漂浮层背景色（toast、popover）
+$hbui-feedback-overlay-text: var(--hbui-feedback-overlay-text, $hbui-slate-20); // 信息提示反馈类型的漂浮层背景色搭配文本色
 $hbui-embed-search-bg: var(--hbui-embed-search-bg, $hbui-zinc-10); // 被嵌套的无边框搜索框背景色
-$hbui-embed-search-bg-hover: var(
-  --hbui-embed-search-bg-hover,
-  $hbui-slate-10
-); // 被嵌套的无边框搜索框背景色
-$hbui-float-block-shadow: var(
-  --hbui-float-block-shadow,
-  rgba(94, 124, 224, 0.3)
-); // 特殊浮层背景色（待修正）
-$hbui-highlight-overlay: var(
-  --hbui-highlight-overlay,
-  rgba(255, 255, 255, 0.8)
-); // 局部半透明全局浮层背景色（比如底部）
-$hbui-range-item-hover-bg: var(
-  --hbui-range-item-hover-bg,
-  $hbui-blue-10
-); // datepicker范围中的日期hover的反馈背景色
+$hbui-embed-search-bg-hover: var(--hbui-embed-search-bg-hover, $hbui-slate-10); // 被嵌套的无边框搜索框背景色
+$hbui-float-block-shadow: var(--hbui-float-block-shadow, rgba(94, 124, 224, 0.3)); // 特殊浮层背景色（待修正）
+$hbui-highlight-overlay: var(--hbui-highlight-overlay, rgba(255, 255, 255, 0.8)); // 局部半透明全局浮层背景色（比如底部）
+$hbui-range-item-hover-bg: var(--hbui-range-item-hover-bg, $hbui-blue-10); // datepicker范围中的日期hover的反馈背景色
 
 // 按钮
 $hbui-primary: var(--hbui-primary, $hbui-blue-50); // 主要按钮，同品牌色

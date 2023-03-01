@@ -2,22 +2,22 @@ import DefaultTheme from 'vitepress/theme'
 import 'vitepress-theme-demoblock/dist/theme/styles/index.css'
 import type { Theme } from 'vitepress'
 
+import HbUITheme from '../hbui-theme'
+
+// @ts-ignore
 import Demo from '../demo/Demo.vue'
+// @ts-ignore
 import DemoBlock from '../demo/DemoBlock.vue'
-
-import HbUiTheme from '../hbui-theme'
-
-import CardInstall from '../../../ui/card/index'
-import ButtonInstall from '../../../ui/button/index'
+// @ts-ignore
+import HbUI from '@hbui/vue-hbui'
 
 export default <Theme>{
   ...DefaultTheme,
-  ...HbUiTheme,
+  ...HbUITheme,
   enhanceApp({ app }) {
+    app.use(HbUI)
+
     app.component('Demo', Demo)
     app.component('DemoBlock', DemoBlock)
-
-    app.use(CardInstall)
-    app.use(ButtonInstall)
   }
 }

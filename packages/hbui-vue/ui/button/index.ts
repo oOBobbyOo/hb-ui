@@ -4,10 +4,6 @@ import ButtonGroup from './src/button-group'
 
 export * from './src/button-types'
 
-Button.install = function (app: App): void {
-  app.component(Button.name, Button)
-}
-
 export { Button, ButtonGroup }
 
 export default {
