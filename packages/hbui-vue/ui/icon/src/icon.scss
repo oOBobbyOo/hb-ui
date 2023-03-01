@@ -1,0 +1,106 @@
+@import '@hbui/styles-var/index.scss';
+
+$hbui-icon-background-hover: var(--hbui-icon-background-hover, $hbui-list-item-hover-bg);
+$hbui-icon-background-active: var(--hbui-icon-background-active, $hbui-list-item-active-bg);
+
+.#{$hbui-prefix}-icon {
+  &__container {
+    display: inline-block;
+    color: $hbui-icon-fill;
+
+    & > *:not(:last-child) {
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    i {
+      vertical-align: middle;
+      transition: all $hbui-animation-duration-slow $hbui-animation-ease-in-out-smooth;
+    }
+  }
+
+  &--no-slots {
+    i {
+      display: block;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  &--disabled {
+    color: $hbui-disabled-text;
+    cursor: not-allowed;
+
+    i {
+      color: $hbui-disabled-text;
+    }
+  }
+
+  &--operable {
+    &:not(.#{$hbui-prefix}-icon--disabled) {
+      cursor: pointer;
+      transition: color $hbui-animation-duration-slow $hbui-animation-ease-in-out-smooth;
+
+      i {
+        cursor: pointer;
+      }
+    }
+
+    &:hover:not(.#{$hbui-prefix}-icon--disabled) {
+      color: $hbui-icon-fill-hover;
+
+      &.#{$hbui-prefix}-icon__container {
+        background-color: $hbui-icon-background-hover;
+      }
+
+      i {
+        color: $hbui-icon-fill-hover;
+      }
+    }
+
+    &:active:not(.#{$hbui-prefix}-icon--disabled) {
+      color: var(--hbui-icon-active-color, $hbui-icon-fill-active);
+
+      &.#{$hbui-prefix}-icon__container {
+        background-color: $hbui-icon-background-active;
+      }
+
+      i {
+        color: var(--hbui-icon-active-color, $hbui-icon-fill-active);
+      }
+    }
+
+    &.#{$hbui-prefix}-icon__container {
+      height: 32px;
+      line-height: 32px;
+      padding: 0 8px;
+      margin-left: -8px;
+      border-radius: $hbui-border-radius;
+      transition: all $hbui-animation-duration-slow $hbui-animation-ease-in-out-smooth;
+    }
+  }
+
+  &--spin {
+    animation: iconSpin 2.5s linear infinite;
+  }
+}
+
+.#{$hbui-prefix}-svg-icon {
+  vertical-align: middle;
+}
+
+@keyframes iconSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
