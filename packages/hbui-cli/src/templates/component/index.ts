@@ -1,21 +1,7 @@
 import { camelCase } from 'lodash-es'
-import {
-  coreFileName,
-  coreName,
-  directiveFileName,
-  directiveName,
-  propsTypesName,
-  serviceFileName,
-  serviceName,
-  typesFileName
-} from './utils'
+import { coreFileName, coreName, directiveFileName, directiveName, propsTypesName, serviceFileName, serviceName, typesFileName } from './utils'
 
-export default function genIndexTemplate(
-  name: string,
-  title: string,
-  category: string,
-  parts: string[]
-) {
+export default function genIndexTemplate(name: string, title: string, category: string, parts: string[]) {
   const importParts = []
   const exportParts = []
   const installParts = []
@@ -36,9 +22,7 @@ export default function genIndexTemplate(
 
     importParts.push(`import ${serviceName(name)} from './src/${serviceFileName(name)}'`)
     exportParts.push(serviceName(name))
-    installParts.push(
-      `\tapp.config.globalProperties.$${camelCase(serviceName(name))} = ${serviceName(name)}`
-    )
+    installParts.push(`\tapp.config.globalProperties.$${camelCase(serviceName(name))} = ${serviceName(name)}`)
   }
 
   if (parts.includes('directive')) {

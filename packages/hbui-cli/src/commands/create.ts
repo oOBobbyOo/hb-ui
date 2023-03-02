@@ -4,10 +4,12 @@ import { CREATE_SUPPORT_TYPES, CREATE_UNFINISHED_TYPES } from '../shared/constan
 import { selectCreateType } from '../inquiers/create'
 import createComponentAction from './create-component'
 import createDocumentAction from './create-doc'
+import CreateSidebarAction from './create-sidebar'
 
 const CREATE_TYPE_ACTION = {
   component: createComponentAction,
-  'component-doc': createDocumentAction
+  'component-doc': createDocumentAction,
+  'vitepress-sidebar': CreateSidebarAction
 }
 
 export type CreateCMD = {

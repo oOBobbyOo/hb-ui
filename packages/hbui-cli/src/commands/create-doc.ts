@@ -1,9 +1,8 @@
 import inquirer from 'inquirer'
-
-import { CreateCMD } from './create'
-import logger from '../shared/logger'
+import type { CreateCMD } from './create'
 import { typeName, typeTitle, selectParts } from '../inquiers/document'
 import genDocument from '../shared/generate-doc'
+import logger from '../shared/logger'
 
 export default async function createDocumentAction(names: string[] = [], cmd: CreateCMD = {}) {
   const [name = '', title = ''] = names
@@ -11,7 +10,7 @@ export default async function createDocumentAction(names: string[] = [], cmd: Cr
   try {
     params = await inquirer.prompt([typeName(name), typeTitle(title), selectParts()])
 
-    await genDocument(params)
+    genDocument(params)
   } catch (e: any) {
     logger.error(e.message)
     process.exit(1)

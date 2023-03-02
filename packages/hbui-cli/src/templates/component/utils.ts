@@ -8,8 +8,7 @@ export const serviceFileName = (name: string) => kebabCase(name + '-service')
 export const directiveFileName = (name: string) => kebabCase(name + '-directive')
 
 export const getRealLibPrefix = () => (cliConfig.libPrefix ? cliConfig.libPrefix + '-' : '')
-export const getRealClassPrefix = () =>
-  cliConfig.libClassPrefix ? cliConfig.libClassPrefix + '-' : ''
+export const getRealClassPrefix = () => (cliConfig.libClassPrefix ? cliConfig.libClassPrefix + '-' : '')
 
 export const coreName = (name: string) => bigCamelCase(name)
 export const coreRealName = (name: string) => bigCamelCase(getRealLibPrefix() + name)

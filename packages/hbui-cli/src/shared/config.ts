@@ -1,4 +1,4 @@
-import { CWD, VITEPRESS_SIDEBAR_CATEGORY } from './constant'
+import { CWD, VERSION, VITEPRESS_SIDEBAR_CATEGORY } from './constant'
 
 export const cliConfig = {
   cwd: CWD,
@@ -9,5 +9,5 @@ export const cliConfig = {
   libClassPrefix: '',
   libEntryRootDir: '.',
   libEntryFileName: 'index',
-  version: '0.0.0'
+  version: VERSION
 }

@@ -2,13 +2,7 @@ import { resolve } from 'path'
 import { WriteFileOptions } from 'fs'
 import { mkdirSync, writeFileSync } from 'fs-extra'
 import { cliConfig } from './config'
-import {
-  coreFileName,
-  coreName,
-  directiveFileName,
-  serviceFileName,
-  typesFileName
-} from '../templates/component/utils'
+import { coreFileName, coreName, directiveFileName, serviceFileName, typesFileName } from '../templates/component/utils'
 import genIndexTemplate from '../templates/component'
 import genCoreTemplate from '../templates/component/core'
 import genStyleTemplate from '../templates/component/style'
@@ -43,11 +37,7 @@ export default function genComponent(params: any) {
     // 组件
     writeFileSync(coreFilePath + '.tsx', genCoreTemplate(name), WRITE_FILE_OPTIONS)
     // 样式
-    writeFileSync(
-      coreFilePath + cliConfig.libStyleFileSuffix,
-      genStyleTemplate(name),
-      WRITE_FILE_OPTIONS
-    )
+    writeFileSync(coreFilePath + cliConfig.libStyleFileSuffix, genStyleTemplate(name), WRITE_FILE_OPTIONS)
   }
 
   if (parts.includes('service')) {

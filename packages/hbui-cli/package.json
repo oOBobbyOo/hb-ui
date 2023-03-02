@@ -16,19 +16,25 @@
   ],
   "scripts": {
     "dev": "esbuild --bundle ./src/bin.ts --format=cjs --platform=node --outfile=./lib/bin.js --external:esbuild --minify-whitespace --watch",
+    "build": "run-p build:lib",
+    "build:lib": "rimraf ./lib && esbuild --bundle ./src/bin.ts --format=cjs --platform=node --outfile=./lib/bin.js --external:esbuild --minify-whitespace",
     "cli": "node ./lib/bin.js"
   },
   "dependencies": {
-    "esbuild": "^0.17.10",
-    "fs-extra": "^11.1.0",
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
+    "@babel/parser": "^7.21.2",
+    "@babel/traverse": "^7.21.2",
+    "@types/babel__traverse": "^7.18.3",
     "@types/fs-extra": "^11.0.1",
     "@types/inquirer": "^9.0.3",
     "@types/lodash-es": "^4.17.6",
     "commander": "^10.0.0",
+    "esbuild": "^0.17.10",
+    "fs-extra": "^11.1.0",
     "inquirer": "^9.1.4",
-    "kolorist": "^1.7.0"
+    "kolorist": "^1.7.0",
+    "rimraf": "^4.1.3"
   }
 }
