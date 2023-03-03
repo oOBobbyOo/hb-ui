@@ -3,7 +3,7 @@ import { camelCase, upperFirst } from 'lodash-es'
 import { readdirSync, existsSync, readFileSync } from 'fs-extra'
 import { parse } from '@babel/parser'
 import traverse from '@babel/traverse'
-import { WRITE_FILE_OPTIONS } from './generate-component'
+import { WRITE_FILE_OPTIONS } from './constant'
 import logger from './logger'
 
 type AnyKeyValue = { [key: string]: any }

@@ -1,7 +1,7 @@
 import { resolve } from 'path'
-import { WriteFileOptions } from 'fs'
 import { mkdirSync, writeFileSync } from 'fs-extra'
 import { cliConfig } from './config'
+import { UI_DIR, SRC_DIR_NAME, TESTS_DIR_NAME, INDEX_FILE_NAME, WRITE_FILE_OPTIONS } from './constant'
 import { coreFileName, coreName, directiveFileName, serviceFileName, typesFileName } from '../templates/component/utils'
 import genIndexTemplate from '../templates/component'
 import genCoreTemplate from '../templates/component/core'
@@ -12,16 +12,14 @@ import genServiceTemplate from '../templates/component/service'
 import genDirectiveTemplate from '../templates/component/directive'
 import logger from './logger'
 
-export const WRITE_FILE_OPTIONS: WriteFileOptions = { encoding: 'utf-8' }
-
 export default function genComponent(params: any) {
   const { name, title, category, parts } = params
-  const targetDir = resolve(cliConfig.cwd, '../hbui-vue')
-  const componentDir = resolve(targetDir, 'ui')
-
-  const coreFilePath = resolve(componentDir, coreFileName(name))
-  const srcPath = resolve(coreFilePath, 'src')
-  const testsPath = resolve(coreFilePath, '__tests__')
+  // 组件目录
+  const coreFilePath = resolve(UI_DIR, coreFileName(name))
+  // 组件src目录
+  const srcPath = resolve(coreFilePath, SRC_DIR_NAME)
+  // 组件测试目录
+  const testsPath = resolve(coreFilePath, TESTS_DIR_NAME)
 
   // 创建目录
   mkdirSync(coreFilePath, { recursive: true })
@@ -29,45 +27,45 @@ export default function genComponent(params: any) {
   mkdirSync(testsPath, { recursive: true })
 
   let needsTypes = false
-
   if (parts.includes('component')) {
     needsTypes = true
 
     const coreFilePath = resolve(srcPath, coreFileName(name))
-    // 组件
+    // 组件 [name].tsx
     writeFileSync(coreFilePath + '.tsx', genCoreTemplate(name), WRITE_FILE_OPTIONS)
-    // 样式
+    // 样式 [name].scss
     writeFileSync(coreFilePath + cliConfig.libStyleFileSuffix, genStyleTemplate(name), WRITE_FILE_OPTIONS)
   }
 
   if (parts.includes('service')) {
     needsTypes = true
 
-    const serviceFilePath = resolve(srcPath, serviceFileName(name) + '.ts')
-    writeFileSync(serviceFilePath, genServiceTemplate(name), WRITE_FILE_OPTIONS)
+    const serviceName = resolve(srcPath, serviceFileName(name) + '.ts')
+    // [name]-service.ts
+    writeFileSync(serviceName, genServiceTemplate(name), WRITE_FILE_OPTIONS)
   }
 
   if (parts.includes('directive')) {
     needsTypes = true
 
-    const directiveFilePath = resolve(srcPath, directiveFileName(name) + '.ts')
-    // 指令
-    writeFileSync(directiveFilePath, genDirectiveTemplate(), WRITE_FILE_OPTIONS)
+    const directiveName = resolve(srcPath, directiveFileName(name) + '.ts')
+    // [name]-directive.ts
+    writeFileSync(directiveName, genDirectiveTemplate(), WRITE_FILE_OPTIONS)
   }
 
   if (needsTypes) {
-    const typesFilePath = resolve(srcPath, typesFileName(name) + '.ts')
-    // 类型
-    writeFileSync(typesFilePath, genTypesTemplate(name), WRITE_FILE_OPTIONS)
+    const typesName = resolve(srcPath, typesFileName(name) + '.ts')
+    // [name]-types.ys
+    writeFileSync(typesName, genTypesTemplate(name), WRITE_FILE_OPTIONS)
   }
 
   if (parts.length > 0) {
-    const indexFilePath = resolve(coreFilePath, `${cliConfig.libEntryFileName}.ts`)
-    const testFilePath = resolve(testsPath, `${coreFileName(name)}.test.ts`)
-    // index
-    writeFileSync(indexFilePath, genIndexTemplate(name, title, category, parts), WRITE_FILE_OPTIONS)
-    // test
-    writeFileSync(testFilePath, genTestTemplate(name), WRITE_FILE_OPTIONS)
+    const indexFileName = resolve(coreFilePath, INDEX_FILE_NAME)
+    const testFileName = resolve(testsPath, `${coreFileName(name)}.test.ts`)
+    // index.ts
+    writeFileSync(indexFileName, genIndexTemplate(name, title, category, parts), WRITE_FILE_OPTIONS)
+    // [name].test.ts
+    writeFileSync(testFileName, genTestTemplate(name), WRITE_FILE_OPTIONS)
   }
 
   logger.success(`The component "${coreName(name)}" directory has been generated successfully.`)
