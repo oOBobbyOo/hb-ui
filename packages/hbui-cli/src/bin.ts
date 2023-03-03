@@ -3,6 +3,7 @@ import { Command } from 'commander'
 import { CREATE_SUPPORT_TYPES } from './shared/constant'
 import { createAction, validateCreateType } from './commands/create'
 import createSidebarAction from './commands/create-sidebar'
+import createDtsAction from './commands/create-dts'
 
 const program = new Command()
 
@@ -16,5 +17,7 @@ program
   .action(createAction)
 
 program.command('generate:sidebar').description('生成文档侧边栏导航').action(createSidebarAction)
+
+program.command('generate:dts').description('生成ts类型文件').action(createDtsAction)
 
 program.parse(process.argv)
