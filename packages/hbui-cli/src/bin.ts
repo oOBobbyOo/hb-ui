@@ -2,7 +2,7 @@
 import { Command } from 'commander'
 import { CREATE_SUPPORT_TYPES } from './shared/constant'
 import { createAction, validateCreateType } from './commands/create'
-import createDocumentAction from './commands/create-sidebar'
+import createSidebarAction from './commands/create-sidebar'
 
 const program = new Command()
 
@@ -15,6 +15,6 @@ program
   .option('--cover', '覆盖原文件', false)
   .action(createAction)
 
-program.command('generate:sidebar').description('生成文档侧边栏导航').action(createDocumentAction)
+program.command('generate:sidebar').description('生成文档侧边栏导航').action(createSidebarAction)
 
 program.parse(process.argv)

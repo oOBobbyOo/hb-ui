@@ -1,5 +1,6 @@
 {
-  "name": "hb-ui",
+  "name": "root",
+  "private": true,
   "scripts": {
     "prepare": "husky install",
     "precommit": "lint-staged",
