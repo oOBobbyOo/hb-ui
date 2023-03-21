@@ -1,3 +1,4 @@
+import { resolve } from 'path'
 import { defineConfig } from 'vitest/config'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -14,6 +15,13 @@ export default defineConfig({
       }
     })
   ],
+  resolve: {
+    alias: [
+      { find: '@hbui', replacement: resolve(__dirname, './ui') },
+      { find: '@hooks', replacement: resolve(__dirname, './ui/shared/hooks') },
+      { find: '@utils', replacement: resolve(__dirname, './ui/shared/utils') }
+    ]
+  },
   test: {
     globals: true,
     environment: 'jsdom',
