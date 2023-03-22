@@ -1,4 +1,4 @@
-const lang: any = {
+const lang = {
   '/': {
     'hide-text': '隐藏代码',
     'show-text': '显示代码',

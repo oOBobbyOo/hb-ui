@@ -21,9 +21,9 @@ features:
 
   - icon: ⚡️
     title: 快速
-    details: vite3不只是快。
+    details: vite不只是快。
 
   - icon: 💡
     title: 技术栈
-    details: vite3、vitepress、vitest、vue3、tsx。
+    details: vite、vitepress、vitest、vue3、tsx。
 ---
