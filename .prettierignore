@@ -3,7 +3,10 @@ node_modules
 dist
 dist-ssr
 build
+lib
 coverage
 cache
 .eslintcache
+.vitepress
 *.local
+

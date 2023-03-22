@@ -7,14 +7,8 @@ $hbui-btn-common-bg-active: var(--hbui-btn-common-bg-active, $hbui-base-bg);
 $hbui-btn-common-color-hover: var(--hbui-btn-common-color-hover, $hbui-brand-active);
 $hbui-btn-common-color-active: var(--hbui-btn-common-color-active, $hbui-brand-active);
 $hbui-btn-common-border-color: var(--hbui-btn-common-border-color, $hbui-line);
-$hbui-btn-common-border-color-hover: var(
-  --hbui-btn-common-border-color-hover,
-  $hbui-form-control-line-active
-);
-$hbui-btn-common-border-color-active: var(
-  --hbui-btn-common-border-color-active,
-  $hbui-form-control-line-active
-);
+$hbui-btn-common-border-color-hover: var(--hbui-btn-common-border-color-hover, $hbui-form-control-line-active);
+$hbui-btn-common-border-color-active: var(--hbui-btn-common-border-color-active, $hbui-form-control-line-active);
 $hbui-btn-sm-padding: var(--hbui-btn-sm-padding, 0 16px);
 $hbui-btn-lg-padding: var(--hbui-btn-lg-padding, 0 24px);
 
@@ -269,8 +263,7 @@ $hbui-btn-lg-padding: var(--hbui-btn-lg-padding, 0 24px);
 
 .#{$hbui-prefix}-button {
   transition: background-color $hbui-animation-duration-slow $hbui-animation-ease-in-out-smooth,
-    border-color $hbui-animation-duration-slow $hbui-animation-ease-in-out-smooth,
-    color $hbui-animation-duration-slow $hbui-animation-ease-in-out-smooth;
+    border-color $hbui-animation-duration-slow $hbui-animation-ease-in-out-smooth, color $hbui-animation-duration-slow $hbui-animation-ease-in-out-smooth;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;

@@ -16,8 +16,7 @@
     <template #title>HBUI Course</template>
     <template #subtitle class="card-demo-icon"></template>
     <template #content>
-      HBUI is a free open-source and common solution for the front end of enterprise mid- and
-      back-end products. Its design values are basedon...
+      HBUI is a free open-source and common solution for the front end of enterprise mid- and back-end products. Its design values are basedon...
     </template>
   </hb-card>
 </template>
