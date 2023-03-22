@@ -21,5 +21,10 @@ export default defineConfig({
       { find: '@hooks', replacement: resolve(__dirname, '../ui/shared/hooks') },
       { find: '@utils', replacement: resolve(__dirname, '../ui/shared/utils') }
     ]
+  },
+  build: {
+    rollupOptions: {
+      external: ['@docsearch/js']
+    }
   }
 })
