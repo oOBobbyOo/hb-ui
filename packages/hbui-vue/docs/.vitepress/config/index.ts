@@ -26,12 +26,17 @@ export default defineConfig({
   themeConfig: {
     outline: 3,
     lastUpdatedText: '最后更新时间',
-    socialLinks: [{ icon: 'github', link: '' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/oOBobbyOo/vue-hbui' }],
     sidebar,
     nav,
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2022-present Henry Bobby'
+    },
+    algolia: {
+      appId: 'your_app_id',
+      apiKey: 'your_api_key',
+      indexName: 'index_name'
     }
   }
 })

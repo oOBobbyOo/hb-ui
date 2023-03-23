@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import VueMacros from 'unplugin-vue-macros/vite'
 import Inspect from 'vite-plugin-inspect'
+// import { SearchPlugin } from 'vitepress-plugin-search'
 import { MdTransformer } from './.vitepress/plugins/md-transformer'
 
 export default defineConfig({
@@ -13,6 +14,11 @@ export default defineConfig({
       }
     }),
     Inspect(),
+    // SearchPlugin({
+    //   placeholder: 'Procure por algo!',
+    //   buttonLabel: 'Procurar',
+    //   previewLength: 10
+    // }),
     MdTransformer()
   ],
   resolve: {
@@ -21,10 +27,5 @@ export default defineConfig({
       { find: '@hooks', replacement: resolve(__dirname, '../ui/shared/hooks') },
       { find: '@utils', replacement: resolve(__dirname, '../ui/shared/utils') }
     ]
-  },
-  build: {
-    rollupOptions: {
-      external: ['@docsearch/js']
-    }
   }
 })

@@ -36,11 +36,13 @@
   },
   "dependencies": {
     "@docsearch/css": "^3.3.3",
+    "@docsearch/js": "^3.3.3",
     "@vueuse/core": "^9.13.0",
     "body-scroll-lock": "4.0.0-beta.0",
     "vue": "^3.2.45"
   },
   "devDependencies": {
+    "@algolia/client-search": "^4.15.0",
     "@types/escape-html": "^1.0.2",
     "@types/markdown-it": "^12.2.3",
     "@types/markdown-it-container": "^2.0.5",
@@ -54,6 +56,7 @@
     "@vuepress/plugin-prismjs": "2.0.0-beta.4",
     "chalk": "^5.2.0",
     "escape-html": "^1.0.3",
+    "flexsearch": "^0.7.31",
     "jsdom": "^21.1.0",
     "markdown-it": "^13.0.1",
     "markdown-it-container": "^3.0.0",
@@ -65,6 +68,7 @@
     "vite": "^4.1.0",
     "vite-plugin-inspect": "^0.7.15",
     "vitepress": "1.0.0-alpha.45",
+    "vitepress-plugin-search": "1.0.4-alpha.19",
     "vitepress-theme-demoblock": "^2.0.2",
     "vitest": "^0.28.5",
     "vue-tsc": "^1.0.24"
