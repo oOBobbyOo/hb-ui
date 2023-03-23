@@ -20,6 +20,10 @@ const sidebar = [
         "link": "/components/button/"
       },
       {
+        "text": "Fullscreen 全屏",
+        "link": "/components/fullscreen/"
+      },
+      {
         "text": "Icon 图标",
         "link": "/components/icon/"
       }

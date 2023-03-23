@@ -1,4 +1,5 @@
 import { defineComponent, ref, Transition, onMounted } from 'vue'
+import type { SetupContext } from 'vue'
 import AlertCloseIcon from './components/alert-close-icon'
 import AlertTypeIcon from './components/alert-type-icon'
 import { alertProps, AlertProps } from './alert-types'
@@ -8,8 +9,8 @@ import './alert.scss'
 export default defineComponent({
   name: 'HbAlert',
   props: alertProps,
-  emits: ['close'],
-  setup(props: AlertProps, ctx) {
+  emits: ['close'] as string[],
+  setup(props: AlertProps, ctx: SetupContext) {
     const ns = useNamespace('alert')
     const hide = ref(false)
     const closing = ref(false)

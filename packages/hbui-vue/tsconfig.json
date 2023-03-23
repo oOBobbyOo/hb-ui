@@ -19,13 +19,12 @@
       "@hooks/*": ["./ui/shared/hooks/*"],
       "@utils/*": ["./ui/shared/utils/*"]
     },
-    "types": ["vite/client", "unplugin-vue-macros/macros-global"],
-    "typeRoots": ["./node_modules", "./typings/vue-shim.d.ts"],
+    "types": ["vite/client", "node", "unplugin-vue-macros/macros-global"],
+    "typeRoots": ["./node_modules/@types", "./typings/vue-shim.d.ts"],
     "plugins": [{ "name": "@vuedx/typescript-plugin-vue" }],
     "declaration": true,
     "declarationDir": "build/types"
   },
   "include": ["ui/**/*.ts", "ui/**/*.d.ts", "ui/**/*.tsx", "ui/**/*.vue"],
-  "exclude": ["node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

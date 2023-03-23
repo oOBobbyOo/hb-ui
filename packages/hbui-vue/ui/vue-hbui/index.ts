@@ -1,12 +1,13 @@
 import type { App } from 'vue'
 import AlertInstall, { Alert } from '../alert'
 import ButtonInstall, { Button, ButtonGroup } from '../button'
-import IconInstall, { Icon } from '../icon'
 import CardInstall, { Card } from '../card'
+import FullscreenInstall, { Fullscreen } from '../fullscreen'
+import IconInstall, { Icon } from '../icon'
 
-const installs = [AlertInstall, ButtonInstall, IconInstall, CardInstall]
+const installs = [AlertInstall, ButtonInstall, IconInstall, CardInstall, FullscreenInstall]
 
-export { Alert, Button, ButtonGroup, Icon, Card }
+export { Alert, Button, ButtonGroup, Card, Fullscreen, Icon }
 
 export default {
   install(app: App): void {

@@ -7,6 +7,7 @@ import './button.scss'
 export default defineComponent({
   name: 'HbButton',
   props: buttonProps,
+  emits: ['click'] as string[],
   setup(props: ButtonProps, ctx: SetupContext) {
     const { disabled, loading } = toRefs(props)
     const { classes } = useButton(props, ctx)

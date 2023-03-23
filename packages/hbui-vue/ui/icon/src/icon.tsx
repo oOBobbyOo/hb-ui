@@ -1,4 +1,5 @@
-import { computed, defineComponent, EmitsOptions, SetupContext, toRefs } from 'vue'
+import { computed, defineComponent, toRefs } from 'vue'
+import type { SetupContext } from 'vue'
 import { iconProps, IconProps } from './icon-types'
 import { useNamespace } from '@hooks/use-namespace'
 import { useIconDom } from './composables/use-icon-dom'
@@ -6,7 +7,7 @@ import { useIconDom } from './composables/use-icon-dom'
 export default defineComponent({
   name: 'HbIcon',
   props: iconProps,
-  emits: ['click'] as EmitsOptions,
+  emits: ['click'] as string[],
   setup(props: IconProps, ctx: SetupContext) {
     const { disabled, operable } = toRefs(props)
     const { iconDom } = useIconDom(props, ctx)
