@@ -1,7 +1,7 @@
 import { writeFileSync } from 'fs-extra'
 import { VITEPRESS_SIDEBAR_FILE, UI_DIR, COMPONENT_IGNORE_DIRS, VITEPRESS_SIDEBAR_CATEGORY, WRITE_FILE_OPTIONS, SIDEBAR_FILE_NAME } from './constant'
 import { exportComponentsInfo, genSidebarNavs, resolveComponentsInfo } from './utils'
-import genSidebarTemplate from '../templates/component/sidebar'
+import genSidebarTemplate from '../templates/doc/sidebar'
 import logger from './logger'
 
 export default function genSidebar() {

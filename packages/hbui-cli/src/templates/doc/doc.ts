@@ -1,5 +1,5 @@
-import { cliConfig } from './../../shared/config'
-import { coreName } from './utils'
+import { cliConfig } from '../../shared/config'
+import { coreName } from '../component/utils'
 
 export default function genDocTemplate(name: string, title: string) {
   return `\

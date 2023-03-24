@@ -4,6 +4,7 @@ import { CREATE_SUPPORT_TYPES } from './shared/constant'
 import { createAction, validateCreateType } from './commands/create'
 import createSidebarAction from './commands/create-sidebar'
 import createDtsAction from './commands/create-dts'
+import createLibEntryAction from './commands/create-lib-entry'
 
 const program = new Command()
 
@@ -19,5 +20,7 @@ program
 program.command('generate:sidebar').description('生成文档侧边栏导航').action(createSidebarAction)
 
 program.command('generate:dts').description('生成ts类型文件').action(createDtsAction)
+
+program.command('generate:lib-entry').description('生成组件入口文件').action(createLibEntryAction)
 
 program.parse(process.argv)

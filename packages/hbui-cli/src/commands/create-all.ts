@@ -5,6 +5,7 @@ import genComponent from '../shared/generate-component'
 import genDocument from '../shared/generate-doc'
 import genSidebar from '../shared/generate-sidebar'
 import generateDts from '../shared/generate-dts'
+import genLibEntry from '../shared/generate-lib-entry'
 import logger from '../shared/logger'
 
 export default async function createAllAction(names: string[] = [], cmd: CreateCMD = {}) {
@@ -21,6 +22,8 @@ export default async function createAllAction(names: string[] = [], cmd: CreateC
     genSidebar()
     // 类型
     generateDts()
+    // 入口
+    genLibEntry()
   } catch (e: any) {
     logger.error(e.message)
     process.exit(1)

@@ -2,8 +2,8 @@ import { resolve } from 'path'
 import { mkdirSync, writeFileSync } from 'fs-extra'
 import { DOCS_COMPONENTS_DIR, DOCS_EXAMPLE_DIR, DOCS_FILE_NAME, WRITE_FILE_OPTIONS } from './constant'
 import { coreFileName } from '../templates/component/utils'
-import genDocumentTemplate from '../templates/component/doc'
-import genExampleTemplate from '../templates/component/example'
+import genDocumentTemplate from '../templates/doc/doc'
+import genExampleTemplate from '../templates/doc/example'
 import logger from './logger'
 
 export default function genDocument(params: any) {
