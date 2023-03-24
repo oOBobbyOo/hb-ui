@@ -25,7 +25,7 @@ export const DOCS_EXAMPLE_DIR = resolve(DOCS_DIR, 'example')
 export const VITEPRESS_DIR = resolve(DOCS_DIR, '.vitepress')
 export const VITEPRESS_SIDEBAR_FILE = resolve(VITEPRESS_DIR, `config/${SIDEBAR_FILE_NAME}`)
 
-export const CREATE_SUPPORT_TYPES = ['component', 'component-doc', 'vitepress-sidebar']
+export const CREATE_SUPPORT_TYPES = ['all', 'component', 'component-doc', 'vitepress-sidebar']
 export const CREATE_UNFINISHED_TYPES = ['component-test']
 
 export const COMPONENT_PARTS_MAP = [

@@ -4,7 +4,7 @@ export const cliConfig = {
   cwd: CWD,
   componentRootDir: '.',
   componentCategories: VITEPRESS_SIDEBAR_CATEGORY,
-  libPrefix: '',
+  libPrefix: 'hb',
   libStyleFileSuffix: '.scss',
   libClassPrefix: '',
   libEntryRootDir: '.',

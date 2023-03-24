@@ -32,7 +32,7 @@ export default function genIndexTemplate(name: string, title: string, category: 
   }
 
   if (needsTypes) {
-    importParts.push(`import { ${propsTypesName(name)} } from './src/${typesFileName(name)}'`)
+    // importParts.push(`import { ${propsTypesName(name)} } from './src/${typesFileName(name)}'`)
     propsParts.push(propsTypesName(name))
   }
 
@@ -40,19 +40,16 @@ export default function genIndexTemplate(name: string, title: string, category: 
 import type { App } from 'vue'
 ${importParts.join('\n')}
 
-${coreName(name)}.install = function (app: App): void {
-${installParts.join('\n')}
-}
+export * from './src/${typesFileName(name)}'
 
 export { ${exportParts.join(', ')} }
-export type { ${propsParts.join(', ')} }
 
 export default {
   title: '${coreName(name)} ${title}',
   category: '${category}',
   status: '0%',
   install(app: App) {
-    app.component(${coreName(name)}.name, ${coreName(name)});
+    app.component(${coreName(name)}.name, ${coreName(name)})
   }
 }
 `

@@ -2,11 +2,13 @@ import inquirer from 'inquirer'
 import logger from '../shared/logger'
 import { CREATE_SUPPORT_TYPES, CREATE_UNFINISHED_TYPES } from '../shared/constant'
 import { selectCreateType } from '../inquiers/create'
+import createAllAction from './create-all'
 import createComponentAction from './create-component'
 import createDocumentAction from './create-doc'
 import CreateSidebarAction from './create-sidebar'
 
 const CREATE_TYPE_ACTION = {
+  all: createAllAction,
   component: createComponentAction,
   'component-doc': createDocumentAction,
   'vitepress-sidebar': CreateSidebarAction
