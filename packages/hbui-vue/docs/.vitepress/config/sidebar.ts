@@ -26,6 +26,10 @@ const sidebar = [
       {
         "text": "Icon 图标",
         "link": "/components/icon/"
+      },
+      {
+        "text": "Status 状态",
+        "link": "/components/status/"
       }
     ]
   },

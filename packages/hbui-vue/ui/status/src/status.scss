@@ -1,0 +1,61 @@
+@import '@hbui/styles-var/index.scss';
+
+.#{$hbui-prefix}-status {
+  line-height: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    display: inline-block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    border-radius: 100%;
+  }
+}
+
+.#{$hbui-prefix}-status.#{$hbui-prefix}-status__bg {
+  &--success {
+    &::before {
+      background-color: $hbui-success;
+    }
+  }
+
+  &--error {
+    &::before {
+      background-color: $hbui-danger;
+    }
+  }
+
+  &--warning {
+    &::before {
+      background-color: $hbui-warning;
+    }
+  }
+
+  &--initial {
+    &::before {
+      background-color: $hbui-initial;
+    }
+  }
+
+  &--waiting {
+    &::before {
+      background-color: $hbui-waiting;
+    }
+  }
+
+  &--running {
+    &::before {
+      background-color: $hbui-info;
+    }
+  }
+
+  &--invalid {
+    &::before {
+      background-color: $hbui-dividing-line;
+    }
+  }
+}
