@@ -17,6 +17,7 @@ export const SIDEBAR_FILE_NAME = 'sidebar.ts'
 export const COMPONENT_IGNORE_DIRS = ['shared', 'styles', 'styles-var', 'vue-hbui']
 
 export const UI_DIR = resolve(CWD, '../hbui-vue/ui')
+export const VUE_UI_FILE = resolve(UI_DIR, VUE_UI_FILE_NAME)
 export const COMPONENTS_DIR = resolve(UI_DIR, COMPONENTS_DIR_NAME)
 
 export const DOCS_DIR = resolve(CWD, '../hbui-vue/docs')
@@ -25,7 +26,7 @@ export const DOCS_EXAMPLE_DIR = resolve(DOCS_DIR, 'example')
 export const VITEPRESS_DIR = resolve(DOCS_DIR, '.vitepress')
 export const VITEPRESS_SIDEBAR_FILE = resolve(VITEPRESS_DIR, `config/${SIDEBAR_FILE_NAME}`)
 
-export const CREATE_SUPPORT_TYPES = ['all', 'component', 'component-doc', 'vitepress-sidebar']
+export const CREATE_SUPPORT_TYPES = ['all', 'component', 'component-doc', 'lib-entry', 'vitepress-sidebar']
 export const CREATE_UNFINISHED_TYPES = ['component-test']
 
 export const COMPONENT_PARTS_MAP = [

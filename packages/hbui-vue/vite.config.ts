@@ -34,7 +34,7 @@ export default defineConfig({
       }
     },
     lib: {
-      entry: './ui/vue-hbui/index.ts',
+      entry: resolve(__dirname, './ui/vue-hbui.ts'),
       name: 'VueHbui',
       fileName: 'vue-hbui',
       formats: ['es', 'umd', 'cjs']

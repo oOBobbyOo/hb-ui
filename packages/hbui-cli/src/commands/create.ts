@@ -5,12 +5,14 @@ import { selectCreateType } from '../inquiers/create'
 import createAllAction from './create-all'
 import createComponentAction from './create-component'
 import createDocumentAction from './create-doc'
+import createLibEntryAction from './create-lib-entry'
 import CreateSidebarAction from './create-sidebar'
 
 const CREATE_TYPE_ACTION = {
   all: createAllAction,
   component: createComponentAction,
   'component-doc': createDocumentAction,
+  'lib-entry': createLibEntryAction,
   'vitepress-sidebar': CreateSidebarAction
 }
 
