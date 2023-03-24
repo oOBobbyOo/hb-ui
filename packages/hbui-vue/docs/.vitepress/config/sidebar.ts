@@ -50,6 +50,10 @@ const sidebar = [
     "text": "数据展示",
     "items": [
       {
+        "text": "Avatar 头像",
+        "link": "/components/avatar/"
+      },
+      {
         "text": "Card 卡片",
         "link": "/components/card/"
       }
