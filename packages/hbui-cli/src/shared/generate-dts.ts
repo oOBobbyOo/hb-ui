@@ -5,7 +5,7 @@ import genDtsTemplate from '../templates/component/dts'
 import logger from './logger'
 
 export default function generateDts() {
-  const dtsFilename = resolve(UI_DIR, '../build/types/index.d.ts')
+  const dtsFilename = resolve(UI_DIR, '../build/index.d.ts')
 
   outputFileSync(dtsFilename, genDtsTemplate(), WRITE_FILE_OPTIONS)
 
