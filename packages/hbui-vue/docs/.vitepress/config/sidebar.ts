@@ -43,6 +43,10 @@ const sidebar = [
       {
         "text": "Alert 警告",
         "link": "/components/alert/"
+      },
+      {
+        "text": "Drawer 抽屉板",
+        "link": "/components/drawer/"
       }
     ]
   },
