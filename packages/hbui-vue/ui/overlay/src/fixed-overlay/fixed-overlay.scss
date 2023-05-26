@@ -1,0 +1,21 @@
+@import '@hbui/styles-var/index.scss';
+
+.#{$hbui-prefix}-fixed-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $hbui-shadow;
+  z-index: 1050;
+}
+
+.#{$hbui-prefix}-fixed-overlay--fade-enter-active,
+.#{$hbui-prefix}-fixed-overlay--fade-leave-active {
+  transition: opacity 0.1s cubic-bezier(0, 0, 1, 1);
+}
+
+.#{$hbui-prefix}-fixed-overlay--fade-enter-from,
+.#{$hbui-prefix}-fixed-overlay--fade-leave-to {
+  opacity: 0;
+}

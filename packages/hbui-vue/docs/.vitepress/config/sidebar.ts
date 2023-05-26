@@ -28,6 +28,10 @@ const sidebar = [
         "link": "/components/icon/"
       },
       {
+        "text": "Overlay 遮罩层",
+        "link": "/components/overlay/"
+      },
+      {
         "text": "Status 状态",
         "link": "/components/status/"
       }
